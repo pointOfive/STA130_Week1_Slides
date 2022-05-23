@@ -1,0 +1,659 @@
+---
+title: "Module 1: R, Rstudio, and Jupyterhub"
+subtitle: "Statistical Reasoning and Data Science"
+author: "Scott Schwartz"
+date: May 18, 2021
+output: 
+  beamer_presentation:
+    theme: "Pittsburgh"
+    colortheme: "orchid"
+    fonttheme: "structurebold"
+    slide_level: 2
+    includes:
+      in_header: preamble.tex
+classoption: "aspectratio=169"
+fontsize: 11pt
+urlcolor: blue
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# echo=FALSE will stop the code chunk from appearing in the knit document
+# warning=FALSE and message=FALSE will stop R messages from appearing in the knit document
+library(tidyverse)
+
+# here is the data for this project
+expedia_data <- read_csv("ExpediaSearchData.csv")
+
+# see the Project Overview page for more information: 
+# https://q.utoronto.ca/courses/235890/pages/project-overview
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png",
+#              destfile = "images/R.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+#              destfile = "images/python.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+#              destfile = "images/sql.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/SAS_logo_horiz.svg/2560px-SAS_logo_horiz.svg.png",
+#              destfile = "images/sas.png", mode = 'wb')
+#download.file(url = "http://students.washington.edu/ayandm/tutfiles/spsstrans.png",
+#              destfile = "images/ssps.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/7/79/Stata_logo_med_blue.png",
+#              destfile = "images/stata.png", mode = 'wb')
+#download.file(url = "https://opendreamkit.org/public/images/jupyterhub.png",
+#              destfile = "images/jupyterhub.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2086px-Microsoft_Excel_2013-2019_logo.svg.png",
+#              destfile = "images/excel.png", mode = 'wb')
+#download.file(url = "https://colab.research.google.com/img/colab_favicon_256px.png",
+#              destfile = "images/colab.png", mode = 'wb')
+#download.file(url = "https://www.minitab.com/content/dam/www/en/uploadedImages/Content/Home/Minitab18_icon_498x50.png",
+#              destfile = "images/minitab.png", mode = 'wb')
+#download.file(url = "https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png",
+#              destfile = "images/Rstudio.png", mode = 'wb')
+#download.file(url = "https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png",
+#              destfile = "images/github.png", mode = 'wb')
+```
+
+## Statistical Reasoning and Data Science (DS)
+
+\Large 
+
+### Modern Stats+DS is
+
+\vspace{.5cm}
+1. software, programming, and computational tools implementing
+
+\vspace{.5cm}
+2. mathematical and algorithmic data analysis methodologies for
+
+\vspace{.5cm}
+3. facilitating data-driven and evidence-based decision making 
+\vspace{.5cm}
+
+## 1. software, programming, and computational tools
+
+<!-- https://stackoverflow.com/questions/15625990/how-to-set-size-for-local-image-using-knitr-for-markdown -->
+|![](images/R.png){width=60px}&nbsp;&nbsp;![](images/python.png){width=40px}|![](images/Rstudio.png){width=100px}|![](images/jupyterhub.png){width=100px}|![](images/github.png){width=100px}&nbsp;&nbsp;![](images/colab.png){width=50px}|
+|:-:|:-:|:-:|:-:|
+|![](images/sas.png){width=100px}|![](images/ssps.png){width=100px}|![](images/stata.png){width=100px}|![](images/minitab.png){width=30px}&nbsp;&nbsp;![](images/excel.png){width=30px}&nbsp;&nbsp;![](images/sql.png){width=90px}|
+
+\Large 
+
+### Modern Stats+DS is based on using computational tools
+- Programming IS required for DS and applied stats
+
+- Programming isn't a prerequisite: wanting to learn to code is
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#download.file(url = "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png",
+#              destfile = "images/overflow.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Stack_Exchange_logo_and_wordmark.svg/1280px-Stack_Exchange_logo_and_wordmark.svg.png",
+#              destfile = "images/exchange.png", mode = 'wb')
+#download.file(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png",
+#              destfile = "images/google.png", mode = 'wb')
+#download.file(url = "https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png",
+#              destfile = "images/medium.png", mode = 'wb')
+#download.file(url = "https://www.dremio.com/wp-content/uploads/2021/10/towards-data-science-logo.png",
+#              destfile = "images/tds.png", mode = 'wb')
+#download.file(url = "https://logos-world.net/wp-content/uploads/2020/09/Wikipedia-Emblem.png",
+#              destfile = "images/wiki.png", mode = 'wb')
+```
+
+## Class Check
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (2 questions)
+
+
+## Statistical Reasoning and Data Science (DS)
+
+\Large 
+
+### Modern Stats+DS is
+
+\vspace{.5cm}
+1. software, programming, and computational tools implementing
+
+\vspace{.5cm}
+2. mathematical and algorithmic data analysis methodologies for
+
+\vspace{.5cm}
+3. facilitating data-driven and evidence-based decision making 
+\vspace{.5cm}
+
+
+## 2. math, algorithms, and data analysis Part I: Structured Learning
+
+\large
+
+When first learning, organized content like our [course content](https://github.com/pointOfive/STA130) is best
+\vspace{.1cm}
+
+| Attend Lectures | Monday 10:10AM ET and 2:10PM ET | N/A |
+|-:|:-|-:|
+| Review [Slides](https://github.com/pointOfive/STA130) | Study for midterm and final exams | 40% |
+| [Practice Questions](https://github.com/pointOfive/STA130) | Study for midterm and final exams | N/A |
+| Attend Tutorials | Thursday 3:10PM ET in-person tasks | 20% | 
+| Do [Homework](https://github.com/pointOfive/STA130) | Due before start of next class | 15% |
+| [Coures Project](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | 25% |
+
+\vspace{-.25cm}
+Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and  online Rstudio [primers](https://rstudio.cloud/learn/primers/) and [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
+
+## 2. math, algorithms, and data analysis Part I: Structured Learning RULES
+
+\large
+
+When first learning, organized content like our [course content](https://github.com/pointOfive/STA130) is best
+\vspace{.1cm}
+
+| Attending Lectures | isn't mandatory, but they're not recorded | N/A |
+|-:|:-|-:|
+| Final/Midterm Exams | **Makeup exams for excused absence only** | 40% |
+| [Practice Questions](https://github.com/pointOfive/STA130) | aren't mandatory, but are good practice | N/A |
+| Attending Tutorials | **No late or missed submissions accepted** | 20% | 
+| [Homework](https://github.com/pointOfive/STA130) | **No late or missed submissions accepted** | 15% |
+| [Coures Project](https://github.com/pointOfive/STA130) | **Late submissions for excused absence only** | 25% |
+
+\vspace{-.25cm}
+Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and  online Rstudio [primers](https://rstudio.cloud/learn/primers/) and [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
+
+## 2. math, algorithms, and data analysis Part I: Structured Learning RULES
+
+\Huge
+
+\begin{block}{Special Rules}
+
+Highest homework mark replaces lowest
+
+Highest tutorial mark replaces lowest
+\end{block}
+
+\Large
+These are meant to smooth out "small bumps" in your semester
+
+*If it's not enough to help, you're experiencing an unusually tough semester and need to see your college registrar immediately*
+
+
+## Class Check
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (6 questions)
+
+
+
+## 2. math, algorithms, and data analysis Part I$\sfrac{1}{2}$: Structured Learning $\rightarrow$ Unstructured Learning
+
+\Large
+Structured Learning is great whenever you can get it...
+
+\large
+
+When first learning, organized content like our [course content](https://github.com/pointOfive/STA130) is best
+
+\vspace{.25cm}
+
+\huge
+
+### *but once you start to get the hang of it*
+
+**you're going to need to troubleshoot** and
+
+\vspace{.25cm}
+***graduate to the next level of learning...***
+
+## 2. math, algorithms, and data analysis Part II: Unstructured Learning
+
+|![](images/overflow.png){width=175px}|![](images/google.png){width=125px}|![](images/wiki.png){width=125px}|
+|:-:|:-:|:-:|
+|![](images/exchange.png){width=175px}|![](images/medium.png){width=125px}|![](images/tds.png){width=125px}|
+
+\begin{block}{Modern Stats+DS learning communities propegate knowledge and solutions}
+\begin{itemize}
+\item R is ubiquitous in traditional data analysis and statistical communities
+\begin{itemize}
+\item and increasingly supports machine learning (ML), bioinformatics, etc.
+\end{itemize}
+\item Python is dominant in nearly all application involving coding, such as DS and ML
+\begin{itemize}
+\item and increasingly overlaps and supports users traditionally from the R community
+\end{itemize}
+\end{itemize}
+\end{block}
+
+## Class Check
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (4 questions)
+
+
+## 2. math, algorithms, and data analysis Part III: Structured Learning $\rightarrow$ Unstructured Learning
+
+\large
+So when you get strange error or don't know an answer to something
+
+Ask yourself
+
+1. Have I reviewed the [course notes](https://github.com/pointOfive/STA130) well enough?
+\vspace{.05cm}
+
+2. Is this the kind of problem a [google search](https://www.google.com/search?q=let+me+google+that+for+you) could fix?
+\vspace{.05cm}
+
+3. Could this have already been answered on the [course piazza](https://piazza.com)?
+\vspace{.05cm}
+
+4. Am I SURE this hasn't already been answered on the [course piazza](https://piazza.com)?
+\vspace{.05cm}
+
+5. Would discussing my problem in an office hour be more helpful than [piazza](https://piazza.com)?
+\vspace{.05cm}
+
+6. Is asking on the [course piazza](https://piazza.com) probably the fastest way to get an answer?
+
+## Class Check
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (3 questions)
+
+
+## Statistical Reasoning and Data Science (DS)
+
+\Large 
+
+### Modern Stats+DS is
+
+\vspace{.5cm}
+1. software, programming, and computational tools implementing
+
+\vspace{.5cm}
+2. mathematical and algorithmic data analysis methodologies for
+
+\vspace{.5cm}
+3. facilitating data-driven and evidence-based decision making 
+\vspace{.5cm}
+
+
+## 3. facilitating data-driven evidence-based work: Jupyterhub
+
+[Jupyterhub](jupyter.utoronto.ca/) is a cloud-based service allowing you to run R/Rstudio from any web browser
+
+- You can run R/Rstudio locally as well, and you may need to install Rstudio so you can do this for this class in case of temporary Jupyterhub service outage 
+
+\vspace{.5cm}
+
+<!-- https://stackoverflow.com/questions/15142134/slides-with-columns-in-pandoc -->
+::: columns
+:::: column
+
+\Large
+
+\vspace{.75cm}
+
+From [Jupyerhub in a gif-y](https://rstudio-with-jupyerhub-uoft.netlify.app/#1)
+
+\vspace{.25cm}
+
+<!-- https://stackoverflow.com/questions/52275963/insert-gif-in-pdf-using-rmarkdown -->
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/logingin.gif}{Logging in}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/logingin.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/troubleshooting.gif}{troubleshooting}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/troubleshooting.gif")
+}
+```
+::::
+:::: column
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#download.file(url = "https://raw.githubusercontent.com/utoronto-2i2c/homepage/master/extra-assets/images/home-hero.png",
+#              destfile = "images/UofTjupyterhub.png", mode = 'wb')
+```
+![](images/UofTjupyterhub.png){width=200px}
+::::
+:::
+
+
+
+## 3. facilitating data-driven evidence-based work: Rstudio
+
+[Rstudio](https://www.rstudio.com/) is just a nice GUI IDE program that wraps up R along with a .Rmd code editor and file and data management capabilities
+
+- GUI means "graphical user interface" while IDE means "integrated developers environment", and .Rmd files are ["R Markdowns"](https://bookdown.org/yihui/rmarkdown/) which combine text and code to create .pdf files and [presentation slides](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) ([like the ones I'm using here now](https://deic.uab.cat/~iblanes/beamer_gallery/))
+
+<!-- https://stackoverflow.com/questions/24677642/centering-image-and-text-in-r-markdown-for-a-pdf-report -->
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{images/rstudio.png}
+\end{center}
+
+---
+
+<!-- https://stackoverflow.com/questions/28000062/tables-and-figures-side-by-side-in-knitr-or-rmarkdown-beamer -->
+
+\hspace*{-1.5cm}
+\begin{minipage}[t]{0.825\linewidth}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="115%", fig.align='left', fig.alg='Two fuzzy round monsters dressed as wizards, working together to brew different things together from a pantry (code, text, figures, etc.) in a cauldron labeled “R Markdown”. The monster wizard at the cauldron is reading a recipe that includes steps “1. Add text. 2. Add code. 3. Knit. 4. (magic) 5. Celebrate perceived wizardry.” The R Markdown potion then travels through a tube, and is converted to markdown by a monster on a broom with a magic wand, and eventually converted to an output by pandoc. Stylized text (in a font similar to Harry Potter) reads “R Markdown. Text. Code. Output. Get it together, people.”'}
+#download.file(url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/rmarkdown_rockstar.png",
+#          destfile = "images/rmarkdown_rockstar.png", mode = 'wb')
+#download.file(url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/rmarkdown_wizards.png",
+#          destfile = "images/rmarkdown_wizards.png", mode = 'wb')
+#download.file(url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/reproducibility_court.png",
+#          destfile = "images/reproducibility_court.png", mode = 'wb')
+#download.file(url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/r_first_then.png",
+#          destfile = "images/r_first_then.png", mode = 'wb')
+knitr::include_graphics("images/rmarkdown_wizards.png")
+```
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.175\linewidth}
+
+\vspace{-.6cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+\vspace{-1.0cm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\begin{center}\\Huge \\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif}{Knitting}\\end{center}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/knitting.gif")
+}
+```
+
+\end{minipage}
+
+---
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="99%", fig.align='center', fig.center='A judge’s desk labeled “Reproducibility” with a witness stand right next to it. On the witness stand is a smiling and confident R Markdown document pointing at some lines of code on itself. A fuzzy monster lawyer in a polka-dot tie stands proudly saying “Nothing further!” The judge (also a cute fuzzy monster) is smiling with their hands raised in celebration of reproducible work.'}
+knitr::include_graphics("images/reproducibility_court.png")
+```
+
+---
+
+
+<!-- https://stackoverflow.com/questions/51287734/rmarkdown-package-pdftex-def-error-online-image-not-found --> 
+<!-- https://stackoverflow.com/questions/25415365/insert-side-by-side-png-images-using-knitr -->
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center', fig.alt='A glam rock band comprised of 3 fuzzy round monsters labeled as “Text”, “Outputs” and “Code” performing together. Stylized title text reads: “R Markdown - we’re getting the band back together.”'}
+knitr::include_graphics("images/rmarkdown_rockstar.png")
+```
+
+## Running R code in Rstudio
+
+### Knitting produces an output file by runing all .Rmd code in its directory
+
+Code in the (top left) .Rmd window is run in the (bottom left) R console using [shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
+
+### To run code-chunks use "ctrl-shift-enter" (PC) and "cmd-shift-return" (Mac)
+
+- The code will run from the directory of the .Rmd file
+
+### To run a single selected line of code use "ctrl-enter" and "cmd-return"
+
+- The code will run from the current working directory
+- The working directory can be set 
+  - through the Session (Mac) or Tools (PC) tab in the menu bar
+  - by running the code `setwd(<path/to/dir>)` in the R console
+  - or with the GUI interface "gear" icon on the (bottom right) files pane
+
+
+## 3. facilitating data-driven evidence-based work: Rstudio File Management
+
+From [Jupyerhub in a gif-y](https://rstudio-with-jupyerhub-uoft.netlify.app/#1)
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/files.gif}{folders}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/files.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/moving.gif}{relocations}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/moving.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/upload.gif}{uploading}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/upload.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/sharinglink.gif}{linking}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/sharinglink.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/project.gif}{projects}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/project.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/openfile.gif}{files}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/openfile.gif")
+}
+```
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\href{https://rstudio-with-jupyerhub-uoft.netlify.app/img/exporting.gif}{exporting}')
+} else {
+  knitr::include_graphics("https://rstudio-with-jupyerhub-uoft.netlify.app/img/exporting.gif")
+}
+```
+
+```{r echo=FALSE}
+#download.file(url = "https://preview.redd.it/1m9l0op71go21.png?auto=webp&s=dda3e539baa704447fb6c132b339464b9b454236",
+#          destfile = "images/organize.png", mode = 'wb')
+#download.file(url = "https://i.pinimg.com/236x/87/30/b3/8730b35f6f086d92411a4be61d6d2fd3.jpg",
+#          destfile = "images/organize2.jpg", mode = 'wb')
+```
+![](images/organize.png"){width=300px}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](images/organize2.jpg){width=185px}
+
+
+
+## 3. facilitating data-driven evidence-based work: R
+
+\begin{minipage}[t]{0.48\linewidth}
+
+\vspace{1cm}
+
+\href{https://www.r-project.org/about.html}{R} is a data analysis programming console to support the work of statisticians, data scientists, and other data-centric professions
+\vspace{.05cm}
+
+\begin{itemize}
+\item R is a programming language, but its methods and algorithms are usually built-in or loaded from packages, so most R users don't build algorithms or data types like in C++ or java
+\end{itemize}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\begin{figure}[h!]
+\includegraphics[width=0.8\textwidth]{images/r_first_then.png}
+\caption*{R as Illustrated by \href{https://twitter.com/allison_horst}{\@allison\_horst}}
+\end{figure}
+\end{minipage}
+
+## 3. facilitating data-driven evidence-based work: R Packages
+
+```{r echo=FALSE}
+#download.file(url = "https://tidyverse.tidyverse.org/logo.png",
+#             destfile = "images/tidyverse.png", mode = 'wb')
+#download.file(url = "https://elixir-luxembourg.org/assets/events_photos/2021_05_06_R_Tidyverse.png",
+#             destfile = "images/tidyverse2.jpg", mode = 'wb')
+```
+\begin{minipage}[t]{0.31\linewidth}
+
+\vspace{0.5cm}
+
+Newly developed statistical methods are often made available as R package
+
+\vspace{0.25cm}
+
+This makes the publication manuscripts stronger and increases a methods use
+
+\vspace{0.25cm}
+
+Comprehensive R Archive Network (\href{https://cran.r-project.org/}{CRAN})
+currently has \href{https://cran.r-project.org/web/packages/}{18586} packages
+
+\vspace{0.5cm}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\linewidth}
+
+
+For those new to R and arriving with interest in DS, the tidyverse
+is the key set of packages
+
+\vspace{0.5cm}
+
+\begin{center}
+\includegraphics[width=1.50\textwidth]{images/tidyverse.png}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.31\linewidth}
+
+\vspace{0.5cm}
+
+The tidyverse includes
+R packages that help facilitate "data wrangling"
+
+\vspace{0.5cm}
+
+\includegraphics[width=.99\textwidth]{images/tidyverse2.jpg}
+\end{minipage}
+
+
+## Installing Packages, Loading Libraries, and Common Errors
+
+### Installing Packages, Loading Libraries, and Common Errors
+
+\vspace{.25cm}
+
+- You can't run R code unless its package is loaded as `library(packagename)`
+
+\vspace{.25cm}
+
+- You can't load packages unless `install.packages("packagename")` is run first
+  - Packages installed on Jupyterhub must be re-install for each new session...
+
+\vspace{.25cm}
+
+- Some pre-installed packages, e.g., `library(tidyverse)`, will always load
+  - 'There is no package called...' errors mean `install.packages()` is needed
+
+\vspace{.25cm}
+
+- But you can't "knit" .Rmd files `install.packages("packagename")` code
+  - So you have to frequently comment and uncomment `install.packages()`
+
+
+
+## Class Check
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (7 questions)
+
+## Self Quiz
+
+Can you log into JupyterHub and open and knit an RMarkdown document in RStudio?
+
+Can you navigate the Code, R Console, and Files panes in the RStudio interface? 
+
+Did you see the Environment pane and the Help, Packages, and Tutorial tabs?
+
+
+## Rstudio Demo I
+
+1. Click this [jupyterhub repo launcher link](https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSamanthaJoCaetano%2FSTA130-W21-ProblemSet0.git&urlpath=rstudio%2F&branch=master)
+
+   - If this fails (1) log into [RStudio on Jupyterhub](jupyter.utoronto.ca/), (2) delete the folder, (3) retry
+   
+2. Navigate to the intended directory in the (bottom right) files pane
+
+3. Open the intended .Rmd file
+
+4. Follow along / complete the demo
+
+5. Understand Rmd+pdf submission requirements 
+
+6. Determine and commit to a file organization scheme
+
+
+## Rstudio Demo II
+
+
+
+
+
+
+## Quiz
+
+1. Speak/write basic code in a human-friendly way, e.g., reading a pipe (%>%) as "and then".
+4. Explain what a tibble is and what rules it follows.
+5. Types vs Vectors vs Coercion vs Data frames vs read_csv() vs glimpse() and head()
