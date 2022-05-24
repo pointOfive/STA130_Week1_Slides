@@ -1,5 +1,5 @@
 ---
-title: "Module 1: R, Rstudio, and Jupyterhub"
+title: "Week 1: Jupyterhub, R, Rstudio, and the Tidyverse"
 subtitle: "Statistical Reasoning and Data Science"
 author: "Scott Schwartz"
 date: May 18, 2021
@@ -21,12 +21,6 @@ urlcolor: blue
 # echo=FALSE will stop the code chunk from appearing in the knit document
 # warning=FALSE and message=FALSE will stop R messages from appearing in the knit document
 library(tidyverse)
-
-# here is the data for this project
-expedia_data <- read_csv("ExpediaSearchData.csv")
-
-# see the Project Overview page for more information: 
-# https://q.utoronto.ca/courses/235890/pages/project-overview
 ```
 
 
@@ -102,7 +96,7 @@ expedia_data <- read_csv("ExpediaSearchData.csv")
 #              destfile = "images/wiki.png", mode = 'wb')
 ```
 
-## Class Check
+## Class Check Round 1
 
 \Huge [https://pollev.com/sta](https://pollev.com/sta) (2 questions)
 
@@ -133,14 +127,14 @@ When first learning, organized content like our [course content](https://github.
 
 | Attend Lectures | Monday 10:10AM ET and 2:10PM ET | N/A |
 |-:|:-|-:|
-| Review [Slides](https://github.com/pointOfive/STA130) | Study for midterm and final exams | 40% |
+| Attend Tutorials | Thursday 3:10PM ET in-person tasks | **15%** | 
+| [R/Communication HW](https://github.com/pointOfive/STA130) | Due before start of next class | **20%** |
 | [Practice Questions](https://github.com/pointOfive/STA130) | Study for midterm and final exams | N/A |
-| Attend Tutorials | Thursday 3:10PM ET in-person tasks | 20% | 
-| Do [Homework](https://github.com/pointOfive/STA130) | Due before start of next class | 15% |
-| [Coures Project](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | 25% |
+| Review [Slides/Rmds](https://github.com/pointOfive/STA130) | Study for midterm and final exams | **40%** |
+| [Coures Project](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | **25%** |
 
 \vspace{-.25cm}
-Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and  online Rstudio [primers](https://rstudio.cloud/learn/primers/) and [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
+Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and free online [primers](https://rstudio.cloud/learn/primers/), [cheatsheets](https://www.rstudio.com/resources/cheatsheets/), and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
 
 ## 2. math, algorithms, and data analysis Part I: Structured Learning RULES
 
@@ -151,14 +145,15 @@ When first learning, organized content like our [course content](https://github.
 
 | Attending Lectures | isn't mandatory, but they're not recorded | N/A |
 |-:|:-|-:|
-| Final/Midterm Exams | **Makeup exams for excused absence only** | 40% |
+| Attending Tutorials | **No makeups for missed in-person tasks** | 15% | 
+| [R/communication HW](https://github.com/pointOfive/STA130) | **No late or missed submissions accepted** | 20% |
 | [Practice Questions](https://github.com/pointOfive/STA130) | aren't mandatory, but are good practice | N/A |
-| Attending Tutorials | **No late or missed submissions accepted** | 20% | 
-| [Homework](https://github.com/pointOfive/STA130) | **No late or missed submissions accepted** | 15% |
-| [Coures Project](https://github.com/pointOfive/STA130) | **Late submissions for excused absence only** | 25% |
+| Final/Midterm Exams | **Makeup exams for excused absence only** | 40% |
+| [Coures Project](https://github.com/pointOfive/STA130) | **1-2 day late submissions for special cases** | 25% |
+
 
 \vspace{-.25cm}
-Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and  online Rstudio [primers](https://rstudio.cloud/learn/primers/) and [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
+Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and free online [primers](https://rstudio.cloud/learn/primers/), [cheatsheets](https://www.rstudio.com/resources/cheatsheets/), and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
 
 ## 2. math, algorithms, and data analysis Part I: Structured Learning RULES
 
@@ -177,9 +172,9 @@ These are meant to smooth out "small bumps" in your semester
 *If it's not enough to help, you're experiencing an unusually tough semester and need to see your college registrar immediately*
 
 
-## Class Check
+## Class Check Round 2
 
-\Huge [https://pollev.com/sta](https://pollev.com/sta) (6 questions)
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (7 questions)
 
 
 
@@ -222,10 +217,6 @@ When first learning, organized content like our [course content](https://github.
 \end{itemize}
 \end{block}
 
-## Class Check
-
-\Huge [https://pollev.com/sta](https://pollev.com/sta) (4 questions)
-
 
 ## 2. math, algorithms, and data analysis Part III: Structured Learning $\rightarrow$ Unstructured Learning
 
@@ -251,9 +242,9 @@ Ask yourself
 
 6. Is asking on the [course piazza](https://piazza.com) probably the fastest way to get an answer?
 
-## Class Check
+## Class Check Round 3
 
-\Huge [https://pollev.com/sta](https://pollev.com/sta) (3 questions)
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (7 questions)
 
 
 ## Statistical Reasoning and Data Science (DS)
@@ -322,9 +313,10 @@ if (knitr:::is_latex_output()) {
 
 ## 3. facilitating data-driven evidence-based work: Rstudio
 
-[Rstudio](https://www.rstudio.com/) is just a nice GUI IDE program that wraps up R along with a .Rmd code editor and file and data management capabilities
+[Rstudio](https://www.rstudio.com/) is just a nice GUI IDE program that wraps up [R](https://www.r-project.org/) along with a .Rmd code editor and file and data management capabilities
 
-- GUI means "graphical user interface" while IDE means "integrated developers environment", and .Rmd files are ["R Markdowns"](https://bookdown.org/yihui/rmarkdown/) which combine text and code to create .pdf files and [presentation slides](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) ([like the ones I'm using here now](https://deic.uab.cat/~iblanes/beamer_gallery/))
+- GUI means "graphical user interface" while IDE means "integrated developers environment", and .Rmd [RMarkdown](https://bookdown.org/yihui/rmarkdown/) files ([based](https://stackoverflow.com/questions/40563479/relationship-between-r-markdown-knitr-pandoc-and-bookdown) on [Markdown markup language](https://www.markdownguide.org/getting-started/)) combine text with R code to create .html and .pdf output files and [presentation slides](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) ([like the ones I'm using here now](https://deic.uab.cat/~iblanes/beamer_gallery/)).  
+
 
 <!-- https://stackoverflow.com/questions/24677642/centering-image-and-text-in-r-markdown-for-a-pdf-report -->
 
@@ -421,40 +413,40 @@ if (knitr:::is_latex_output()) {
 
 \end{minipage}
 
+
+## Running R code in Rstudio: Knitting
+
+
+
+\vspace{1cm}
+
+1. ***Source*** [Top Left pane]: Rmarkdown files with code and text are knit
+\vspace{0.1cm}
+
+2. ***Console*** [Bottom Left pane]: R code is run to produce output
+\vspace{0.1cm}
+
+3. ***Environment*** [Top Right pane]: R variables and data sets are created
+\vspace{0.1cm}
+
+4. ***Files*** [Bottom Right pane]: code, outputs, and text combined into output 
+\vspace{1cm}
+
+
+### To run code-chunks use "ctrl-shift-enter" (PC) and "cmd-shift-return" (Mac)
+
+- This is just one of many keyboard (key-binding) [shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts) in Rstudio
+
+
+
+
 ---
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="99%", fig.align='center', fig.center='A judge’s desk labeled “Reproducibility” with a witness stand right next to it. On the witness stand is a smiling and confident R Markdown document pointing at some lines of code on itself. A fuzzy monster lawyer in a polka-dot tie stands proudly saying “Nothing further!” The judge (also a cute fuzzy monster) is smiling with their hands raised in celebration of reproducible work.'}
 knitr::include_graphics("images/reproducibility_court.png")
 ```
 
----
 
-
-<!-- https://stackoverflow.com/questions/51287734/rmarkdown-package-pdftex-def-error-online-image-not-found --> 
-<!-- https://stackoverflow.com/questions/25415365/insert-side-by-side-png-images-using-knitr -->
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center', fig.alt='A glam rock band comprised of 3 fuzzy round monsters labeled as “Text”, “Outputs” and “Code” performing together. Stylized title text reads: “R Markdown - we’re getting the band back together.”'}
-knitr::include_graphics("images/rmarkdown_rockstar.png")
-```
-
-## Running R code in Rstudio
-
-### Knitting produces an output file by runing all .Rmd code in its directory
-
-Code in the (top left) .Rmd window is run in the (bottom left) R console using [shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
-
-### To run code-chunks use "ctrl-shift-enter" (PC) and "cmd-shift-return" (Mac)
-
-- The code will run from the directory of the .Rmd file
-
-### To run a single selected line of code use "ctrl-enter" and "cmd-return"
-
-- The code will run from the current working directory
-- The working directory can be set 
-  - through the Session (Mac) or Tools (PC) tab in the menu bar
-  - by running the code `setwd(<path/to/dir>)` in the R console
-  - or with the GUI interface "gear" icon on the (bottom right) files pane
-
-
-## 3. facilitating data-driven evidence-based work: Rstudio File Management
+## Keeping Rstudio Organized: File Management
 
 From [Jupyerhub in a gif-y](https://rstudio-with-jupyerhub-uoft.netlify.app/#1)
 
@@ -592,6 +584,10 @@ R packages that help facilitate "data wrangling"
 
 ## Installing Packages, Loading Libraries, and Common Errors
 
+\Large Installing Packages, Loading Libraries, and Common Errors
+\normalsize 
+\vspace{.25cm}
+
 ### Installing Packages, Loading Libraries, and Common Errors
 
 \vspace{.25cm}
@@ -614,10 +610,10 @@ R packages that help facilitate "data wrangling"
   - So you have to frequently comment and uncomment `install.packages()`
 
 
+## Class Check Round 4
 
-## Class Check
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (5 questions)
 
-\Huge [https://pollev.com/sta](https://pollev.com/sta) (7 questions)
 
 ## Self Quiz
 
@@ -630,7 +626,7 @@ Did you see the Environment pane and the Help, Packages, and Tutorial tabs?
 
 ## Rstudio Demo I
 
-1. Click this [jupyterhub repo launcher link](https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FSamanthaJoCaetano%2FSTA130-W21-ProblemSet0.git&urlpath=rstudio%2F&branch=master)
+1. Click this [jupyterhub repo launcher link](https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FpointOfive%2FSTA130_Week1_Demo1&urlpath=rstudio%2F&branch=main)
 
    - If this fails (1) log into [RStudio on Jupyterhub](jupyter.utoronto.ca/), (2) delete the folder, (3) retry
    
@@ -644,16 +640,37 @@ Did you see the Environment pane and the Help, Packages, and Tutorial tabs?
 
 6. Determine and commit to a file organization scheme
 
+## Class Check Round 5
+
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (6 questions)
+
+
+---
+
+<!-- https://stackoverflow.com/questions/51287734/rmarkdown-package-pdftex-def-error-online-image-not-found --> 
+<!-- https://stackoverflow.com/questions/25415365/insert-side-by-side-png-images-using-knitr -->
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center', fig.alt='A glam rock band comprised of 3 fuzzy round monsters labeled as “Text”, “Outputs” and “Code” performing together. Stylized title text reads: “R Markdown - we’re getting the band back together.”'}
+knitr::include_graphics("images/rmarkdown_rockstar.png")
+```
+
 
 ## Rstudio Demo II
 
+1. Click this [jupyterhub repo launcher link](https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FpointOfive%2FSTA130_Week1_Demo2&urlpath=rstudio%2F&branch=main)
 
 
+## Class Check Bonus Round
+
+[Practice Quiz on Quercus](https://q.utoronto.ca) (10 questions)
+
+Scratch ideas below will be combined with [quiz 1](https://q.utoronto.ca/courses/253019/quizzes/236277/edit) on quercus.
+
+1. head vs glimpse preference
+2. types in columns
+3. read/match "and then" pipe statement
+4. other things?
+5. Speak/write basic code in a human-friendly way, e.g., reading a pipe (%>%) as "and then".
+6. Explain what a tibble is and what rules it follows.
+7. Types vs Vectors vs Coercion vs Data frames vs read_csv() vs glimpse() and head()
 
 
-
-## Quiz
-
-1. Speak/write basic code in a human-friendly way, e.g., reading a pipe (%>%) as "and then".
-4. Explain what a tibble is and what rules it follows.
-5. Types vs Vectors vs Coercion vs Data frames vs read_csv() vs glimpse() and head()
