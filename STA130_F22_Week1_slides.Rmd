@@ -16,7 +16,6 @@ fontsize: 11pt
 urlcolor: blue
 ---
 
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # echo=FALSE will stop the code chunk from appearing in the knit document
 # warning=FALSE and message=FALSE will stop R messages from appearing in the knit document
@@ -125,13 +124,14 @@ library(tidyverse)
 When first learning, organized content like our [course content](https://github.com/pointOfive/STA130) is best
 \vspace{.1cm}
 
-| Attend Lectures | Monday 10:10AM ET and 2:10PM ET | N/A |
+| Attend (2hr) Lectures | Monday 10:10AM ET and 2:10PM ET | N/A |
 |-:|:-|-:|
-| Attend Tutorials | Thursday 3:10PM ET in-person tasks | **15%** | 
-| [R/Communication HW](https://github.com/pointOfive/STA130) | Due before start of next class | **20%** |
-| [Practice Questions](https://github.com/pointOfive/STA130) | Study for midterm and final exams | N/A |
-| Review [Slides/Rmds](https://github.com/pointOfive/STA130) | Study for midterm and final exams | **40%** |
-| [Coures Project](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | **25%** |
+| [R/Communication HW](https://github.com/pointOfive/STA130) | Due before start of tutorial | **15%** |
+| Attend (2hr) Tutorials | Friday 10:10PM ET and  2:10PM ET | **15%** | 
+| Study and Review | [Slides](https://github.com/pointOfive/STA130), [Demos](https://github.com/pointOfive/STA130), [Questions](https://github.com/pointOfive/STA130) | N/A |
+| Midterm/Final Exams | Concepts, communication, and coding | **45%** |
+| [Coures Project](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | **20%** |
+| [Participation](https://github.com/pointOfive/STA130) | Demonstrate your developed skills | **5%** |
 
 \vspace{-.25cm}
 Boost your skills with free textbook resources like [R for Data Science](https://r4ds.had.co.nz/) by Wickham and Grolemund, free learning tools like the [DoSS Toolkit](https://dosstoolkit.com/) from STA130 profs Alexander and Caetano et al., and free online [primers](https://rstudio.cloud/learn/primers/), [cheatsheets](https://www.rstudio.com/resources/cheatsheets/), and [courses](https://www.datacamp.com/courses/free-introduction-to-r)
@@ -146,10 +146,11 @@ When first learning, organized content like our [course content](https://github.
 | Attending Lectures | isn't mandatory, but they're not recorded | N/A |
 |-:|:-|-:|
 | Attending Tutorials | **No makeups for missed in-person tasks** | 15% | 
-| [R/communication HW](https://github.com/pointOfive/STA130) | **No late or missed submissions accepted** | 20% |
-| [Practice Questions](https://github.com/pointOfive/STA130) | aren't mandatory, but are good practice | N/A |
-| Final/Midterm Exams | **Makeup exams for excused absence only** | 40% |
-| [Coures Project](https://github.com/pointOfive/STA130) | **1-2 day late submissions for special cases** | 25% |
+| [R/communication HW](https://github.com/pointOfive/STA130) | **No late or missed submissions accepted** | 15% |
+| Study and Review | not mandatory, but good exam practice | N/A |
+| Final/Midterm Exams | **Makeup exams for excused absence only** | 45% |
+| [Coures Project](https://github.com/pointOfive/STA130) | **1-2 day late submissions for special cases** | 20% |
+| [Participation](https://github.com/pointOfive/STA130) | **Due by last day of classes** | 5% |
 
 
 \vspace{-.25cm}
