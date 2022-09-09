@@ -2,7 +2,7 @@
 title: "Week 1: Statistical Reasoning and Data Science"
 subtitle: "Jupyterhub, Rstudio/Rmd, R, and the Tidyverse"
 author: "Scott Schwartz"
-date: July 21, 2021
+date: September 12, 2022
 output: 
   beamer_presentation:
     theme: "Pittsburgh"
@@ -74,17 +74,22 @@ library(tidyverse)
 
 ## 1. software, programming, and computational tools
 
+\Large 
+
+\begin{block}{Modern Stats+DS is based on using computational tools}
+\begin{itemize}
+\item Programming IS required for DS and modern applied stats
+\item It's not an STA130 prerequisite but wanting to learn to code is
+\end{itemize}
+\end{block}
+
 <!-- https://stackoverflow.com/questions/15625990/how-to-set-size-for-local-image-using-knitr-for-markdown -->
 |![](images/R.png){width=60px}&nbsp;&nbsp;![](images/python.png){width=40px}|![](images/Rstudio.png){width=100px}|![](images/jupyterhub.png){width=100px}|![](images/github.png){width=100px}&nbsp;&nbsp;![](images/colab.png){width=50px}|
 |:-:|:-:|:-:|:-:|
 |![](images/sas.png){width=100px}|![](images/ssps.png){width=100px}|![](images/stata.png){width=100px}|![](images/minitab.png){width=30px}&nbsp;&nbsp;![](images/excel.png){width=30px}&nbsp;&nbsp;![](images/sql.png){width=90px}|
 
-\Large 
-
-### Modern Stats+DS is based on using computational tools
-- Programming IS required for DS and modern applied stats
-
-- It's not an STA130 prerequisite but wanting to learn to code is
+\vspace{-.35cm}
+\textcolor{gray}{What does the class recognize here?}
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 #download.file(url = "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png",
@@ -112,7 +117,7 @@ library(tidyverse)
 \normalsize
 \begin{block}{Modern Stats+DS learning communities propegate knowledge and solutions}
 \begin{itemize}
-\item R is ubiquitous in traditional data analysis and statistical communities
+\item R is ubiquitous in traditional academic data analysis and statistical communities
 \begin{itemize}
 \item and increasingly supports machine learning (ML), bioinformatics, etc.
 \end{itemize}
@@ -127,7 +132,7 @@ library(tidyverse)
 
 ## Class Check Round 1
 
-\Huge [https://pollev.com/sta](https://pollev.com/sta) (3 questions)
+\Huge [https://pollev.com/sta](https://pollev.com/sta) (2 questions)
 
 
 
@@ -183,14 +188,13 @@ Boost your skills with free textbook resources like [R for Data Science](https:/
 
 \Large 
 
-|![](images/overflow.png){width=175px}|![](images/google.png){width=125px}|![](images/medium.png){width=125px}|
-|:-:|:-:|:-:|
-|![](images/exchange.png){width=175px}|![](images/wiki.png){width=125px}|![](images/tds.png){width=125px}|
-
 \begin{block}{When first learning, structured course material is good}
 Eventually it's faster to learn and troubleshoot problems yourself
 \end{block}
 
+|![](images/overflow.png){width=175px}|![](images/google.png){width=125px}|![](images/medium.png){width=125px}|
+|:-:|:-:|:-:|
+|![](images/exchange.png){width=175px}|![](images/wiki.png){width=125px}|![](images/tds.png){width=125px}|
 
 
 ## 2. math, algorithms, and data analysis Part II: Structured Learning $\rightarrow$ Unstructured Learning
@@ -255,14 +259,16 @@ Eventually it's faster to learn and troubleshoot problems yourself
 
 | 2hr Lec | Monday 9:10AM ET and 2:10PM ET | N/A |
 |-:|:-|-:|
-| [Coures Project](https://github.com/pointOfive/STA130) |  Concepts, Communication, Coding | **20%** |
-| 3hr Tut HW | Friday 9:10PM ET and  2:10PM ET | **14%** | 
-| 2hr [R HW](https://github.com/pointOfive/STA130) | Due Thursday 5pm | **7%** |
+| Study/Review | [Slides](https://github.com/pointOfive/STA130), [Demos](https://github.com/pointOfive/STA130), [Practice Quizzes](https://q.utoronto.ca/courses/277998/quizzes) | N/A |
 | Exams | Midterm 20% and Final 34% | **54%** |
-| Study/Review | [Slides](https://github.com/pointOfive/STA130), [Demos](https://github.com/pointOfive/STA130), [Questions](https://github.com/pointOfive/STA130) | N/A |
-| [Participation](https://github.com/pointOfive/STA130) | Mentorship and Surveys | **5%** |
+| 2hr [R HW](https://github.com/pointOfive/STA130) | Due Thursday 5pm | **7%** |
+| 3hr Tut HW | Friday 9:10PM ET and  2:10PM ET | **14%** | 
+| [Engagement](https://utoronto.sharepoint.com/sites/ArtSci-STA/Mentorship/SitePages/STA130-Mentorship-Program-Home.aspx) | STA130 Mentorship Program | **5%** |
+| [Coures Project](https://github.com/pointOfive/STA130) |  Concepts, Communication, Coding | **20%** |
 
-\vspace{-.25cm}
+\vspace{-.35cm}
+
+\textcolor{red}{*At least 3 hours per week for Study/Review and Project work}
 
 ###
 
@@ -276,21 +282,20 @@ Boost your skills with free textbook resources like [R for Data Science](https:/
 
 | 2hr Lec | not mandatory, but also not recorded | N/A |
 |-:|:-|-:|
-| [Coures Project](https://github.com/pointOfive/STA130) | Due Dec 8th: Emergency Absences ONLY | 20% |
-| 3hr Tut HW | Best 7/9 Policy + [College Registrar](https://www.artsci.utoronto.ca/current/academic-advising-and-support/college-registrars-offices)  | 14% | 
-| 2hr [R HW](https://github.com/pointOfive/STA130) | Best 7/9 Policy + [College Registrar](https://www.artsci.utoronto.ca/current/academic-advising-and-support/college-registrars-offices) | 7% |
-| Exams | Midterm Reweight + [FAS Defer Petition](https://www.artsci.utoronto.ca/current/faculty-registrar/petitions/deferred-exams) | 54% |
 | Study/Review | not mandatory, but good exam practice | N/A |
+| Exams | Midterm Reweight + [FAS Defer Petition](https://www.artsci.utoronto.ca/current/faculty-registrar/petitions/deferred-exams) | 54% |
+| [Coures Project](https://github.com/pointOfive/STA130) | Missed Dec 8th Presentations Reschedule | 20% |
+| 3hr Tut HW | Best 7/9 Policy + [College Registrar](https://www.artsci.utoronto.ca/current/academic-advising-and-support/college-registrars-offices)  | 14% | 
+| 2hr [R HW](https://github.com/pointOfive/STA130) | Best 7/10 Policy + [College Registrar](https://www.artsci.utoronto.ca/current/academic-advising-and-support/college-registrars-offices) | 7% |
 | [Participation](https://github.com/pointOfive/STA130) | Due Dec 8th: No Exceptions | 5% |
 
 \vspace{-.25cm}
 
 ###
 
-For more details on the **Best 7/9 Policy**, **Midterm reweighting**, etc.,  
-please review the [grading policies](https://github.com/pointOfive/STA130/blob/main/README.md#grading) 
-and [accommodation request protocols](https://github.com/pointOfive/STA130/blob/main/README.md#help).
-*E.g., "7/9 policy" extensions must be requested within one week of return to UofT.*
+For more details on any of these policies please review the [syllabus](https://q.utoronto.ca/courses/277998/assignments/syllabus).
+*E.g., "7/X policy" extensions must be requested within one week of return to UofT, and there are similar time-sensitive requirements for mixed exams and project presentations.*
+
 
 ## Class Check Round 4
 
@@ -491,7 +496,7 @@ if (knitr:::is_latex_output()) {
 ::::
 :::
 
-### To run code-chunks use <ctrl-shift-enter> (PC) or <cmd-shift-return> (Mac)
+### To run code-chunks use `ctrl-shift-enter` (PC) or `cmd-shift-return` (Mac)
 
 - This is just one of many keyboard (key-binding) [shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts) in Rstudio
 
@@ -612,7 +617,7 @@ This makes the publication manuscripts stronger and increases a methods use
 \vspace{0.25cm}
 
 Comprehensive R Archive Network (\href{https://cran.r-project.org/}{CRAN})
-currently has \href{https://cran.r-project.org/web/packages/}{18403} packages
+currently has \href{https://cran.r-project.org/web/packages/}{18611} packages
 
 \vspace{0.5cm}
 
